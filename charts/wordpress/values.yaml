@@ -1,1 +1,15 @@
-
+replicaCount: 1
+image:
+  repository: bitnami/wordpress
+  tag: 5.8.1-debian-10-r31
+wordpressUsername: admin
+wordpressPassword: password
+mariadb:
+  auth:
+    rootPassword: password123
+    username: bn_wordpress
+    password: wordpresspass
+    database: bitnami_wordpress
+service:
+  type: ClusterIP
+  port: 80
